@@ -11,4 +11,14 @@ function reducer(accumulator, value) {
 
 var tally = data.reduce(reducer);
 
-console.log(tally);
+console.log(tally) || displayInPreview(tally);
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
