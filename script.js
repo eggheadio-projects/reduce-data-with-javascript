@@ -23,14 +23,5 @@ var reversed = pipeline.reduceRight(function(acc, fn) {
   return fn(acc);
 }, initial_value)
 
-console.log(final_value, reversed) || displayInPreview(final_value) || displayInPreview(reversed);
-
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
+console.log("final_value: ", final_value)
+console.log("reversed: ", reversed)
