@@ -33,29 +33,26 @@ for (var i = 0; i < 1000000; i++) {
   bigData[i] = i;
 }
 
-// console.time('bigData');
+
+let filterBegin = Date.now()
 var filterMappedBigData = bigData.filter(function(value) {
   return value % 2 === 0;
 }).map(function(value) {
   return value * 2;
 });
-// console.timeEnd('bigData');
+let filterEnd = Date.now()
+let filtertimeSpent = (filterEnd-filterBegin)/1000 + "secs";
 
-// console.time('bigDataReduce');
+
+let reducedBegin=Date.now();
 var reducedBigData = bigData.reduce(function(acc, value) {
   if (value % 2 === 0) {
     acc.push(value * 2);
   }
   return acc;
 }, []);
-// console.timeEnd('bigDataReduce');
-displayInPreview(reducedBigData)
+let reducedEnd = Date.now();
+let reducedtimeSpent = (reducedEnd-reducedBegin)/1000 + " secs";
 
-// display in plunker preview
-function displayInPreview(string) {
-  console.log(string)
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
+console.log("filtered Big Data:", filtertimeSpent)
+console.log("reduced Big Data:", reducedtimeSpent)
