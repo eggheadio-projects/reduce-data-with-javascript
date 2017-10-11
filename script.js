@@ -48,16 +48,5 @@ function fatherWasJedi(character) {
 }
 
 characters.forEach(function(character) {
-  console.log(character.name + "'s father was a jedi:", fatherWasJedi(character)) || displayInPreview(character.name + "'s father was a jedi:", fatherWasJedi(character));
+  console.log(character.name + "'s father was a jedi:", fatherWasJedi(character)) 
 });
-
-
-
-
-// display in plunker preview
-function displayInPreview(string, value) {
-  var newDiv = document.createElement("div"); 
-var newContent = document.createTextNode(`${string} ${value}`);
-newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
