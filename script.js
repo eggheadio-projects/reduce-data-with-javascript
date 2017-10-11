@@ -57,18 +57,8 @@ var stars = input.reduce(function(acc, value) {
 
 var data = [1, 2, 3, 4, "5"];
 var sum = data.reduceRight(function(acc, value, index) {
-  console.log(index) || displayInPreview(index);
+  console.log(`Index: ${index}`)
   return acc + value;
 }, 0);
 
-console.log(sum) || displayInPreview(sum);
-
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
+console.log("Sum: ", sum)
