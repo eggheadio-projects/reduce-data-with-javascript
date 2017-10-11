@@ -49,3 +49,13 @@ var reducedBigData = bigData.reduce(function(acc, value) {
   return acc;
 }, []);
 // console.timeEnd('bigDataReduce');
+displayInPreview(reducedBigData)
+
+// display in plunker preview
+function displayInPreview(string) {
+  console.log(string)
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
