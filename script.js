@@ -25,15 +25,8 @@ var reducer = function(tally, vote) {
 
 var result = votes.reduce(reducer, initialValue);
 
-console.log(result) || displayInPreview(result.angular) || displayInPreview(result.react) || displayInPreview(result.ember) || displayInPreview(result.vanilla);
-
-
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
+// Output
+console.log("Angular: ", result.angular)
+console.log("React: ", result.react)
+console.log("Ember: ", result.ember)
+console.log("Vanilla: ", result.vanilla)
